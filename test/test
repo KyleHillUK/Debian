@@ -1,0 +1,15 @@
+#!/etc/bash
+if [ $(dpkg-query -W -f='${Status}' apt-get 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		echo "Fatal Error: apt-get missing.");
+	else
+		echo "Initialising..."
+fi
+apt-get update
+
+if [ $(dpkg-query -W -f='${Status}' nano 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		apt-get install nano;
+	else
+		echo "Nano Installed."
+fi
