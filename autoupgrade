@@ -5,5 +5,5 @@
 
 apt-get update
 yes | apt-get dist-upgrade
-apt-get -yes --force-yes install unattended-upgrades apt-listchanges
-sleep 1
+apt-get --yes --force-yes install unattended-upgrades apt-listchanges
+echo "test"
