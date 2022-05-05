@@ -5,4 +5,4 @@
 
 apt-get update
 yes | apt-get dist-upgrade
-yes | apt-get install unattended-upgrades apt-listchanges
+yes Y| apt-get install unattended-upgrades apt-listchanges
