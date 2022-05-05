@@ -6,3 +6,4 @@
 apt-get update
 yes | apt-get dist-upgrade
 yes Y| apt-get install unattended-upgrades apt-listchanges
+sleep 1
