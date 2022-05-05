@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ## To use this script run:
-#        apt-get update  && apt-get install curl && curl https://raw.github.com/KyleHillUK/Debain/autoupgrade | bash
+#        apt-get update  && apt-get install curl && curl https://raw.githubusercontent.com/KyleHillUK/Debian/main/autoupgrade | bash
 
 apt-get update
 yes | apt-get dist-upgrade
-apt-get install unattended-upgrades apt-listchanges
+yes | apt-get install unattended-upgrades apt-listchanges
