@@ -5,7 +5,7 @@
 ## Inital Install
 apt-get update
 yes | apt-get dist-upgrade
-apt-get --yes --force-yes install unattended-upgrades apt-listchanges
+apt-get --yes --allow install unattended-upgrades apt-listchanges
 echo "Packages Installed."
 ## Config	
 rm /etc/apt/apt.conf.d/20auto-upgrades -f
