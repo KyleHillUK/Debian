@@ -145,3 +145,4 @@ Unattended-Upgrade::Remove-Unused-Dependencies "true";
 // Unattended-Upgrade::Allow-downgrade "false";
 EOT
 echo "Config file written..."
+sleep 1
