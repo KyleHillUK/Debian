@@ -144,4 +144,4 @@ Unattended-Upgrade::Remove-Unused-Dependencies "true";
 // Allow package downgrade if Pin-Priority exceeds 1000
 // Unattended-Upgrade::Allow-downgrade "false";
 EOT
-echo "Config file written."
+echo "Config file written..."
