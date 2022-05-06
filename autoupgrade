@@ -2,16 +2,14 @@
 
 ## To use this script run:
 #        apt-get update  && apt-get install curl && curl https://raw.githubusercontent.com/KyleHillUK/Debian/main/autoupgrade | bash
-
+## Inital Install
 apt-get update
 yes | apt-get dist-upgrade
 apt-get --yes --force-yes install unattended-upgrades apt-listchanges
 echo "Packages Installed."
-
-#update-test	
-rm /etc/apt/apt.conf.d/20auto-upgrades
+## Config	
+rm /etc/apt/apt.conf.d/20auto-upgrades -f
 cat <<EOT>> /etc/apt/apt.conf.d/20auto-upgrades
-
 // Automatically upgrade packages from these (origin:archive) pairs
 //
 // Note that in Ubuntu security updates may pull in new dependencies
@@ -144,5 +142,11 @@ Unattended-Upgrade::Remove-Unused-Dependencies "true";
 // Allow package downgrade if Pin-Priority exceeds 1000
 // Unattended-Upgrade::Allow-downgrade "false";
 EOT
+## End of Config
+##Testing
 echo "Config file written..."
 sleep 1
+echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+dpkg-reconfigure -f noninteractive unattended-upgrades
+systemctl restart apt-daily.timer
+unattended-upgrade --dry
