@@ -9,7 +9,7 @@ apt-get --yes --force-yes install unattended-upgrades apt-listchanges
 echo "Packages Installed."
 
 #update-test	
-
+rm /etc/apt/apt.conf.d/20auto-upgrades
 cat <<EOT>> /etc/apt/apt.conf.d/20auto-upgrades
 
 // Automatically upgrade packages from these (origin:archive) pairs
