@@ -7,3 +7,5 @@ apt-get update
 yes | apt-get dist-upgrade
 apt-get --yes --force-yes install unattended-upgrades apt-listchanges
 echo "test"
+
+#update-test
