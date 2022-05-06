@@ -1,11 +1,11 @@
 #!/bin/bash
 
-## To use this script run:
+## To use this script run as root:
 #        apt-get update  && apt-get install curl && curl https://raw.githubusercontent.com/KyleHillUK/Debian/main/autoupgrade | bash
 ## Inital Install
 apt-get update
 yes | apt-get dist-upgrade
-apt-get --yes --allow install unattended-upgrades apt-listchanges
+yes | apt-get install unattended-upgrades apt-listchanges
 echo "Packages Installed."
 ## Config	
 rm /etc/apt/apt.conf.d/20auto-upgrades -f
