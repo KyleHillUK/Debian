@@ -147,6 +147,5 @@ EOT
 echo "Config file written..."
 sleep 1
 echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
-systemctl restart apt-daily.timer
 dpkg-reconfigure -plow -f noninteractive unattended-upgrades
 unattended-upgrade --dry
